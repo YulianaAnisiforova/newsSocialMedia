@@ -9,12 +9,7 @@ body {
     width: 500px;
     margin-top: 200px;
     background-color: rgb(207, 194, 235);
-    border-radius: 50px 0px 50px 0px;
-
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* direction: column; */
+    border-radius: 70px 0px 70px 0px;
 }
 
 .mailInput, .passwordInput, .phoneInput {
@@ -58,19 +53,19 @@ body {
     visibility:hidden
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
 .signUpButton {
     height: 30px;
     width: 150px;
-    /* display: flex; */
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 100px;
     border: none;
-    /* border: 1px solid rgb(52, 2, 153); */
-    border-radius: 50px 0px 50px 0px;
+    border-radius: 70px 0px 70px 0px;
     background-color: rgb(237, 229, 254);
     cursor: pointer;
-    text-align: center;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 17px;
     color: rgb(71, 71, 71);
