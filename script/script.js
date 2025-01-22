@@ -18,23 +18,30 @@ let validatePhone = (phone) => {
     return checkPhone.test(phone)
 }
 
+phoneInput.onclick = () => {
+    phoneInput.value = '+'
+}
+
 signUpButton.onclick = () => {
     let mailValue = mailInput.value
     if (!validateEmail(mailValue)) {
         mailInput.style.border = '2px solid red'
         mailWarning.style = 'visibility: visible'
+        mailInput.value = null
     }
     
     let passwordValue = passwordInput.value
     if (!passwordValue) {
         passwordInput.style.border = '2px solid red'
         passWarning.style = 'visibility: visible'
+        passwordInput.value = null
     }
 
     let phoneValue = phoneInput.value
     if (!validatePhone(phoneValue)) {
         phoneInput.style.border = '2px solid red'
         phoneWarning.style = 'visibility: visible'
+        phoneInput.value = null
     }
 
     if (!conditions.checked) {
