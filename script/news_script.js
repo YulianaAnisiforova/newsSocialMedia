@@ -1,6 +1,7 @@
-let likeButton = document.querySelector('.likeButton')
-let likeLabel = document.querySelector('.likeLabel')
-let closeButton = document.querySelector('.closeButton')
+let likeButton = document.querySelectorAll('.likeButton')
+let likeLabel = document.querySelectorAll('.likeLabel')
+let closeButton = document.querySelectorAll('.closeButton')
+let newsBox = document.querySelector('.newsBox')
 
 let isRed = () => {
     isRed = false
@@ -30,9 +31,25 @@ likeButton.onclick = () => {
     }
 }
 
-closeButton.onclick = () => {
-    let index = closeButton.id
-    let post = document.getElementById(index)
-    post.style.display = 'none'
-}
+newsBox.addEventListener('click', (event) => {
+    if (event.target.className == 'closeButton') {
+        for (let i = 0; i < closeButton.length; i++) {
+            let index = event.target.id
+            let post = document.getElementById(index)
+            post.style.display = 'none'
+        }
+    }
 
+    if (event.target.className == 'likeButton') {
+        for (let i = 0; i < likeButton.length; i++) {
+            let index = event.target
+            if (index.style.color === 'rgb(71, 71, 71)') {
+                index.style.color = 'red'
+                let text = document.getElementById(index)
+                text.style.visibility = 'visible'
+            } else {
+                index.style.color = 'rgb(71, 71, 71)'
+            }
+        }
+    }
+})
