@@ -19,7 +19,9 @@ let validatePhone = (phone) => {
 }
 
 phoneInput.onclick = () => {
-    phoneInput.value = '+'
+    if (!phoneInput.value) {
+        phoneInput.value = '+7'
+    }
 }
 
 signUpButton.onclick = () => {
@@ -29,7 +31,7 @@ signUpButton.onclick = () => {
     if (!validateEmail(mailValue)) {
         mailInput.style.border = '2px solid red'
         mailWarning.style = 'visibility: visible'
-        mailInput.value = null
+        // mailInput.value = null
         isFilled = false
     } else {
         mailInput.style.border = '2px solid rgb(250, 250, 250)'
@@ -40,7 +42,7 @@ signUpButton.onclick = () => {
     if (!passwordValue) {
         passwordInput.style.border = '2px solid red'
         passWarning.style = 'visibility: visible'
-        passwordInput.value = null
+        // passwordInput.value = null
         isFilled = false
     } else {
         passwordInput.style.border = '2px solid rgb(250, 250, 250)'
@@ -51,7 +53,7 @@ signUpButton.onclick = () => {
     if (!validatePhone(phoneValue)) {
         phoneInput.style.border = '2px solid red'
         phoneWarning.style = 'visibility: visible'
-        phoneInput.value = null
+        // phoneInput.value = null
         isFilled = false
     } else {
         phoneInput.style.border = '2px solid rgb(250, 250, 250)'
