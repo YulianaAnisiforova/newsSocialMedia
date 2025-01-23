@@ -23,11 +23,14 @@ phoneInput.onclick = () => {
 }
 
 signUpButton.onclick = () => {
+    let isFilled = true
+
     let mailValue = mailInput.value
     if (!validateEmail(mailValue)) {
         mailInput.style.border = '2px solid red'
         mailWarning.style = 'visibility: visible'
         mailInput.value = null
+        isFilled = false
     } else {
         mailInput.style.border = '2px solid rgb(250, 250, 250)'
         mailWarning.style = 'visibility: hidden'
@@ -38,6 +41,7 @@ signUpButton.onclick = () => {
         passwordInput.style.border = '2px solid red'
         passWarning.style = 'visibility: visible'
         passwordInput.value = null
+        isFilled = false
     } else {
         passwordInput.style.border = '2px solid rgb(250, 250, 250)'
         passWarning.style = 'visibility: hidden'
@@ -48,6 +52,7 @@ signUpButton.onclick = () => {
         phoneInput.style.border = '2px solid red'
         phoneWarning.style = 'visibility: visible'
         phoneInput.value = null
+        isFilled = false
     } else {
         phoneInput.style.border = '2px solid rgb(250, 250, 250)'
         phoneWarning.style = 'visibility: hidden'
@@ -55,7 +60,12 @@ signUpButton.onclick = () => {
 
     if (!conditions.checked) {
         conditionsDiv.style.color = 'red'
+        isFilled = false
     } else {
         conditionsDiv.style.color = 'rgb(71, 71, 71)'
+    }
+
+    if (isFilled) {
+        window.open('../news/news_index.html')
     }
 }
