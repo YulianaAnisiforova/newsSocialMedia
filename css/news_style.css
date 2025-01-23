@@ -34,7 +34,7 @@ body {
 
 .newsBox {
     height: 100%;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .post {
@@ -44,9 +44,10 @@ body {
     background-color: rgb(207, 194, 235);
     border-radius: 70px 0px 70px 0px;
     margin: auto;
+    margin-top: 50px;
 }
 
-.photoContainer {
+.contentContainer {
     display: flex;
     justify-content: center;
 }
